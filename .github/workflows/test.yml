@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  test:
+    container:
+      image: harupy/pyspark-util
+      volumes:
+        - .:/pyspark-util
+    steps:
+      - name: Run test
+        run: ./tools/test.sh

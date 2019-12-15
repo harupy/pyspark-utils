@@ -10,7 +10,9 @@ jobs:
         - .:/pyspark-util
     steps:
       - uses: actions/checkout@v1
+      - name: Run lint
+        run: |
+          ./tools/lint.sh
       - name: Run test
         run: |
-          ls
           ./tools/test.sh

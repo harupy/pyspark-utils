@@ -10,4 +10,6 @@ jobs:
         - .:/pyspark-util
     steps:
       - name: Run test
-        run: ls
+        run: |
+          ls
+          ./tool/test.sh

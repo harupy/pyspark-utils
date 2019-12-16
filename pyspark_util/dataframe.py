@@ -21,7 +21,7 @@ def _validate_columns(df, columns):
     Raises
     ------
     ValueError
-        If the given dataframe doesn't contains columns with the given names.
+        If the given dataframe doesn't contain columns with the given names.
 
     Examples
     --------

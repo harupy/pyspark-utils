@@ -32,7 +32,7 @@ def _validate_columns(df, columns):
     >>> _validate_columns(df, 'd')  # doctest: +ELLIPSIS
     Traceback (most recent call last):
         ...
-    ValueError: ...
+    ValueError: The given dataframe does not contain ['d'].
     """
     not_found = [c for c in columns if c not in df.columns]
     if len(not_found) > 0:

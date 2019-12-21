@@ -74,7 +74,7 @@ def blank_ratio(col_name, include_null=False):
     is_blank = F.col(col_name) == ''
     if include_null:
         # fill NULL with False
-        is_null = F.col(col_name).isNull()
-        return F.mean(F.when(is_null, False).otherwise(is_blank).cast(IntegerType())).alias(col_name)
+        filled = F.when(F.col(col_name).isNull(), False).otherwise(is_blank)
+        return F.mean(filled.cast(IntegerType())).alias(col_name)
     else:
         return F.mean(is_blank.cast(IntegerType())).alias(col_name)

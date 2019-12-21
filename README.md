@@ -14,7 +14,7 @@ prefixed.show()
 
 This code outputs:
 
-```shell
+```
 +---+---+---+
 |x_a|x_b|x_c|
 +---+---+---+
